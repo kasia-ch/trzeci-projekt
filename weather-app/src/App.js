@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
+import SearchCity from './SearchCity/SearchCity';
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <SearchCity></SearchCity>
   );
 }
 
