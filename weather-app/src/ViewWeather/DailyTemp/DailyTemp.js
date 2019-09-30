@@ -8,6 +8,7 @@ class DailyTemp extends React.Component {
 
     render() {
         return (
+            <h3>Tempratura na 24h: 11-19 C</h3>
         )
     }
 }

@@ -8,6 +8,7 @@ class CurrentTemp extends React.Component {
 
     render() {
         return (
+            <h3>Aktualna temperatura:  14 C</h3>
         )
     }
 }

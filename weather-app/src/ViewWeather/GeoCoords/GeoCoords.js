@@ -8,6 +8,7 @@ class GeoCoords extends React.Component {
 
     render() {
         return (
+            <h3>Współrzędne geograficzne [50.29761, 18.67658]</h3>
         )
     }
 }

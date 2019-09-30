@@ -8,6 +8,8 @@ class Humidity extends React.Component {
 
     render() {
         return (
+            <h3>Wilgotność: 69%</h3>
+            <h3>Ciśnienie: 1000 hPa</h3>
         )
     }
 }

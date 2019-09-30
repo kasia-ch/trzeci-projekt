@@ -8,6 +8,8 @@ class Precipitation extends React.Component {
 
     render() {
         return (
+            <h3>Opady: brak</h3>
+            <h3>Wiatr: Wschodni, 15km/h</h3>
         )
     }
 }
