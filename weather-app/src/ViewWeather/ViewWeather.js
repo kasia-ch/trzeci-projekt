@@ -70,19 +70,19 @@ class ViewWeather extends React.Component {
                     <tr>
                     <th scope="row"></th>
                         <td>Cloudiness:</td>
-                        <td>20 km/h</td>
+                        <td>Scattered clouds</td>
                         <td></td>
                     </tr>
                     <tr>
                     <th scope="row"></th>
                         <td>Sunrise:</td>
-                        <td>20 km/h</td>
+                        <td>06:44</td>
                         <td></td>
                     </tr>
                     <tr>
                     <th scope="row"></th>
                         <td>Sunset:</td>
-                        <td>20 km/h</td>
+                        <td>18:25</td>
                         <td></td>
                     </tr>
 
