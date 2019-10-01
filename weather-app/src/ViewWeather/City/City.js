@@ -8,7 +8,7 @@ class City extends React.Component {
 
     render() {
         return (
-            <h3>Nazwa miasta: Gliwice</h3>
+            city : Gliwice;
         )
     }
 }
