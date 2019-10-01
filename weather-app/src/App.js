@@ -5,11 +5,12 @@ import ViewWeather from './ViewWeather/ViewWeather';
 
 function App() {
   return (
-    <div className="app">
-      <SearchCity></SearchCity>
-      <ViewWeather></ViewWeather>
+    <div className="wrapper">
+      <div className="app container">
+        <SearchCity></SearchCity>
+        <ViewWeather></ViewWeather>
+      </div>
     </div>
-
   );
 }
 

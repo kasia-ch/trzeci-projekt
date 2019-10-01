@@ -1,11 +1,5 @@
 import React from 'react';
 import './ViewWeather.css';
-import GeoCoords from './GeoCoords/GeoCoords';
-import CurrentTemp from './CurrentTemp/CurrentTemp';
-import DailyTemp from './DailyTemp/DailyTemp';
-import Humidity from './Humidity/Humidity';
-import Precipitation from './Precipitation/Precipitation';
-import City from './City/City';
 
 
 class ViewWeather extends React.Component {
@@ -15,47 +9,85 @@ class ViewWeather extends React.Component {
 
     render() {
         return (
-            <table class="table">
-                <thead class="thead-light">
+            <table class="table table-borderless">
+                <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <th scope="row"></th>
+                        <td>City:</td>
+                        <td>Gliwice</td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <th scope="row"></th>
+                        <td>Geo coordinates:</td>
+                        <td>[50.3, 18.68]</td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
+                    <th scope="row"></th>
+                        <td>Temperature:</td>
+                        <td>15 °C</td>
+                        <td></td>
                     </tr>
+                    <tr>
+                    <th scope="row"></th>
+                        <td>Min & Max temperature:</td>
+                        <td>5-17 °C</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row"></th>
+                        <td>Humidity:</td>
+                        <td>58 %</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row"></th>
+                        <td>Pressure:</td>
+                        <td>1009 hPa</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row"></th>
+                        <td>Precipitation:</td>
+                        <td>0%</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row"></th>
+                        <td>Wind:</td>
+                        <td>20 km/h</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row"></th>
+                        <td>Cloudiness:</td>
+                        <td>20 km/h</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row"></th>
+                        <td>Sunrise:</td>
+                        <td>20 km/h</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <th scope="row"></th>
+                        <td>Sunset:</td>
+                        <td>20 km/h</td>
+                        <td></td>
+                    </tr>
+
                 </tbody>
             </table>
-
-
-            <div>
-
-                <City></City>
-                <GeoCoords></GeoCoords>
-                <CurrentTemp></CurrentTemp>
-                <DailyTemp></DailyTemp>
-                <Humidity></Humidity>
-                <Precipitation></Precipitation>
-            </div>
         )
     }
 }
