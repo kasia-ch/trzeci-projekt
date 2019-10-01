@@ -4,12 +4,14 @@ import './SearchCity.css';
 class SearchCity extends React.Component {
     constructor(props) {
         super(props)
+
+        this.onChange = this.onChange.bind(this)
     }
 
-    this.onChange = this.onChange.bind(this)
+
 
     onChange(value){
-        
+
     }
 
     render() {
@@ -21,7 +23,7 @@ class SearchCity extends React.Component {
                     aria-describedby="button-addon2" 
                     value={value}
                     onChange={(e)=>{
-                        onChange(e.target.value)
+                        this.onChange(e.target.value)
                     }} />
 
                     <div className="input-group-append">
