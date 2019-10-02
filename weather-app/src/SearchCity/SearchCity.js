@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchCity.css';
+//import axios from 'axios';
 
 class SearchCity extends React.Component {
     constructor(props) {
@@ -18,7 +19,12 @@ class SearchCity extends React.Component {
             [name]: value
         })
 
-        //axios
+        /*componentDidMount() {
+    axios.get(`https://openweathermap.org/current`)
+    .then(res => {
+      const input = res.data;
+      this.setState({ input });
+    })*/
     }
 
     render() {
