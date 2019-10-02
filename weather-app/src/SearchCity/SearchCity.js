@@ -1,6 +1,6 @@
 import React from 'react';
 import './SearchCity.css';
-//import axios from 'axios';
+
 
 class SearchCity extends React.Component {
     constructor(props) {
@@ -19,15 +19,6 @@ class SearchCity extends React.Component {
             [name]: value
         })
 
-        /*componentDidMount() {
-    axios.get(`https://openweathermap.org/current`)
-    .then(res => {
-      const input = res.data;
-      this.setState({ input });
-    })
-    .catch(function (error) {
-    console.log(error);
-  });*/
     }
 
     render() {
@@ -45,7 +36,7 @@ class SearchCity extends React.Component {
                         <button className="btn btn-outline-secondary" type="button"
                             id="button-addon2"
                             onClick={(event)=>(
-                                event.preventDefault
+                                event.preventDefault()
                             )}>OK</button>
                     </div>
                 </div>
