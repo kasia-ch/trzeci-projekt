@@ -3,16 +3,22 @@ import './SearchCity.css';
 
 class SearchCity extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.onChange = this.onChange.bind(this)
     }
 
 
+    onChange(value) {
+        console.log('onChange', 'value')
+    
 
     onChange(value){
-
+        this.setState({
+            'key': value
+        })
     }
+}
 
     render() {
         return (
@@ -27,7 +33,9 @@ class SearchCity extends React.Component {
                     }} />
 
                     <div className="input-group-append">
-                        <button className="btn btn-outline-secondary" type="button" id="button-addon2">OK</button>
+                        <button className="btn btn-outline-secondary" type="button" 
+                        id="button-addon2"
+                        onClick={onClick}>OK</button>
                     </div>
                 </div>
             </div>

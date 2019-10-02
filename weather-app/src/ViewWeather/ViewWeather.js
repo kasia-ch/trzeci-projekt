@@ -4,7 +4,7 @@ import './ViewWeather.css';
 
 const ViewWeather = ({weather})=>{
     return (
-        <table class="table table-borderless">
+        <table className="table table-borderless">
             <thead>
                 <tr>
                     <th scope="col"></th>
