@@ -24,7 +24,10 @@ class SearchCity extends React.Component {
     .then(res => {
       const input = res.data;
       this.setState({ input });
-    })*/
+    })
+    .catch(function (error) {
+    console.log(error);
+  });*/
     }
 
     render() {
