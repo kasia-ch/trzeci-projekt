@@ -9,15 +9,7 @@ class SearchCity extends React.Component {
         this.state = {
             input: ''
         }
-
-        this.onChange = this.onChange.bind(this)
     }
-
-    onChange(event) {
-        const { name, value } = event.target
-        this.setState({
-            [name]: value
-        })
 
     }
 
@@ -28,10 +20,11 @@ class SearchCity extends React.Component {
                 <div className="input-group mb-3 container">
                     <input type="text" name="input" className="form-control" placeholder="City name" aria-label="city name"
                         aria-describedby="button-addon2"
+                        onSubmit={props.submit}
                         value={this.props.value}
                         onChange={(e) => {
-                            this.onChange(e)
-                        }} />
+                            this.props.handleInputChange(e)
+                            }}/>
 
                     <div className="input-group-append">
                         <button className="btn btn-outline-secondary" type="button"
