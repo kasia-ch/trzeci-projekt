@@ -7,7 +7,7 @@ class SearchCity extends React.Component {
         super(props);
 
         this.state = {
-            'input': ''
+            input: ''
         }
 
         this.onChange = this.onChange.bind(this)

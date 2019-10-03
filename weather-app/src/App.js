@@ -9,8 +9,8 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      "weather": {},
-      "imBusy": false
+      weather: {},
+      imBusy: false
     }
   }
 

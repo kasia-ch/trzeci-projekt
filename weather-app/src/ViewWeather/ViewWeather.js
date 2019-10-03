@@ -2,8 +2,11 @@ import React from 'react';
 import './ViewWeather.css';
 
 
+
 const ViewWeather = ({weather})=>{
-    return (
+    return ( 
+    <div> 
+        <ViewWeather weatherData = {this.state.weather}/>
         <table className="table table-borderless">
             <thead>
                 <tr>
@@ -82,6 +85,7 @@ const ViewWeather = ({weather})=>{
                 </tr>
             </tbody>
         </table>
+    </div>   
     )
 }
 
