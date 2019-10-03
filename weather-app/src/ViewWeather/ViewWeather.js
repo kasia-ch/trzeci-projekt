@@ -49,6 +49,18 @@ const ViewWeather = (props)=>{
                 </tr>
                 <tr>
                     <th scope="row"></th>
+                    <td>Min. temperature:</td>
+                    <td>{temp_min}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Max. temperature:</td>
+                    <td>{temp_max}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
                     <td>Humidity:</td>
                     <td>{humidity}</td>
                     <td></td>
