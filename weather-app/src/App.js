@@ -47,36 +47,19 @@ class App extends React.Component {
           this.setState({ 
             error: false,
             weather: {
-            date: "",
-            city: "",
-            geoCoords: "",
-            sunrise:"",
-            sunset:"",
-            temp: weatherData.main.temp,
-            pressure: "",
-            wind: "",
-            humidity: "",
-            precipitation: "",
-            cloudiness: ""
+              date: "",
+              city: "",
+              geoCoords: weatherData.coord.lon.lat,
+              sunrise: weatherData.sys.sunrise,
+              sunset: weatherData.sys.sunset,
+              temp: weatherData.main.temp,
+              pressure: weatherData.main.pressure,
+              wind:  weatherData.wind.speed,
+              humidity: weatherData.main.humidity,
+              precipitation: weatherData.main.rain.description,
+              cloudiness: weatherData.clouds.all,
           }});
           
-
-        /*const time = new Date().toLocaleString()
-          this.setState(state => ({ 
-            ,
-            date: time,
-            city: state.value,
-            geoCoords: data.coord.lon.lat,
-            sunrise: data.sys.sunrise,
-            sunset: data.sys.sunset,
-            temp: data.main.temp,
-            pressure: data.main.pressure,
-            wind:  data.wind.speed,
-            humidity: data.main.humidity,
-            precipitation: data.main.rain.description,
-            cloudiness: data.clouds.all,
-          }));
-          */
         })
         .catch(error => {
           this.setState(state => ({ 
