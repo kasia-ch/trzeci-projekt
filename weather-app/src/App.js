@@ -12,6 +12,7 @@ class App extends React.Component {
       "weather": {},
       "imBusy": false
     }
+  }
 
     componentDidMount() {
       axios.get(`http://api.openweathermap.org/data/2.5/weather?q=Lublin&appid=05508bb378ad891b493b0c886cca7a57`)
@@ -23,7 +24,6 @@ class App extends React.Component {
           console.log(error);
         });
     }
-  }
 
     render() {
       return (
