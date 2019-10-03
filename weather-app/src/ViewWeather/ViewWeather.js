@@ -6,7 +6,7 @@ import './ViewWeather.css';
 const ViewWeather = (props)=>{
     const {date, city, geoCoords, sunrise, sunset, temp, pressure, wind, humidity, precipitation, cloudiness, error} = props.weather
     return ( 
-    <div {String(props.weather.error)}> 
+    <div>
         <table className="table table-borderless">
             <thead>
                 <tr>
