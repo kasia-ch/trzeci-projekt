@@ -9,9 +9,16 @@ class App extends React.Component {
     super(props)
 
     this.state = {
+      value: "",
       weather: {},
       imBusy: false
     }
+  }
+
+  handleInputChange = () => {
+    this.setState({
+      value:event.target.value
+    })
   }
 
     componentDidMount() {
@@ -29,8 +36,8 @@ class App extends React.Component {
       return (
         <div className="wrapper">
           <div className="app container">
-            <SearchCity></SearchCity>
-            <ViewWeather></ViewWeather>
+            <SearchCity value={this.state.value} change={this.handleInputChange}/>
+            <ViewWeather/>
           </div>
         </div>
       );

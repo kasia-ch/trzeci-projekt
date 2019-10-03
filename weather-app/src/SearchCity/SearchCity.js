@@ -28,6 +28,7 @@ class SearchCity extends React.Component {
                 <div className="input-group mb-3 container">
                     <input type="text" name="input" className="form-control" placeholder="City name" aria-label="city name"
                         aria-describedby="button-addon2"
+                        value={this.props.value}
                         onChange={(e) => {
                             this.onChange(e)
                         }} />
