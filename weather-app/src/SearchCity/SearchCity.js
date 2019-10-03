@@ -29,7 +29,7 @@ class SearchCity extends React.Component {
                     <input type="text" name="input" className="form-control" placeholder="City name" aria-label="city name"
                         aria-describedby="button-addon2"
                         onChange={(e) => {
-                            this.onChange(e.target.value)
+                            this.onChange(e)
                         }} />
 
                     <div className="input-group-append">
