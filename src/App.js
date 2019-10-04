@@ -9,10 +9,7 @@ const APIKey = '05508bb378ad891b493b0c886cca7a57';
 class App extends React.Component {
   constructor(props) {
     super(props)
-
-    componentDidMount() {
-      this.getDate();
-    }
+  
 
     this.state = {
       value: "",
@@ -74,7 +71,7 @@ class App extends React.Component {
       console.log('halo', this.state, error);
       this.setState(prevState => ({ 
         error: true,
-        city: prevState.value }));
+    }));
     })
   }
 
@@ -87,7 +84,9 @@ class App extends React.Component {
             change={this.handleInputChange}
             submit={this.handleCitySubmit}
             />
-            <ViewWeather weather = {this.state.weather}/>
+            <ViewWeather 
+            error = {this.state.error}
+            weather = {this.state.weather}/>
           </div>
         </div>
       );
