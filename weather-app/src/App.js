@@ -50,7 +50,7 @@ class App extends React.Component {
             error: false,
             weather: {
               date: "",
-              city: "",
+              city: state.value,
               geoCoords: weatherData.coord.lon.lat,
               sunrise: weatherData.sys.sunrise,
               sunset: weatherData.sys.sunset,
@@ -66,26 +66,38 @@ class App extends React.Component {
           
         })
         .catch(error => {
-          this.setState(state => ({ 
+          this.setState(prevState => ({ 
             error: true,
-            city: this.state.value }));
+            city: prevState.value }));
         })
     }
 
-    render() {
+    let content = null;
+
+    if(!error && city) {
+      content = (
+        <div>
+          <h3>Weather in <em>{city}</em></h3>
+        </div> 
+      )
+    }
+
+    /*render() {*/
       return (
         <div className="wrapper">
-          <div className="app container">
+          {error ? 'Not found ${city}': content}
+
+          {/*<div className="app container">
             <SearchCity 
             value={this.state.value} 
             change={this.handleInputChange}
             submit={this.handleCitySubmit}
             />
             <ViewWeather weather = {this.state.weather}/>
-          </div>
+          </div>*/}
         </div>
       );
-    }
+    /*}*/
   }
 
   export default App;
