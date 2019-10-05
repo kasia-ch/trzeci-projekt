@@ -9,7 +9,7 @@ const APIKey = '05508bb378ad891b493b0c886cca7a57';
 class App extends React.Component {
   constructor(props) {
     super(props)
-  
+
 
     this.state = {
       value: "",
@@ -17,8 +17,8 @@ class App extends React.Component {
         date: "",
         city: "",
         geoCoords: "",
-        sunrise:"",
-        sunset:"",
+        sunrise: "",
+        sunset: "",
         temp: "",
         temp_min: "",
         temp_max: "",
@@ -26,15 +26,16 @@ class App extends React.Component {
         wind: "",
         humidity: "",
         precipitation: "",
-        cloudiness: ""},
+        cloudiness: ""
+      },
       imBusy: false,
       error: false,
-      }
+    }
   }
 
   handleInputChange = (event) => {
     this.setState({
-      value:event.target.value
+      value: event.target.value
     })
   }
 
@@ -42,55 +43,78 @@ class App extends React.Component {
     event.preventDefault()
 
     axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIKey}&units=metric`)
-    .then(res => {
-      const weatherData = res.data;
+      .then(res => {
+        const weatherData = res.data;
 
-      console.log(weatherData);
-      
-      this.setState({ 
-        error: false,
-        weather: {
-          date: this.state.date,
-          city: this.state.value,
-          geoCoords: weatherData.coord.lon.lat,
-          sunrise: weatherData.sys.sunrise,
-          sunset: weatherData.sys.sunset,
-          temp: weatherData.main.temp,
-          temp_min: weatherData.main.temp_min,
-          temp_max: weatherData.main.temp_max,
-          pressure: weatherData.main.pressure,
-          wind:  weatherData.wind.speed,
-          humidity: weatherData.main.humidity,
-          precipitation: weatherData.main.rain.description,
-          cloudiness: weatherData.clouds.all,
-      }});
+        console.log(weatherData);
 
-      console.log('halo', this.state);
+        this.setState({
+          imBusy: false,
+          error: false,
+          weather: {
+            date: this.state.date,
+            city: this.state.value,
+            geoCoords: weatherData.coord.lon.lat,
+            sunrise: weatherData.sys.sunrise,
+            sunset: weatherData.sys.sunset,
+            temp: weatherData.main.temp,
+            temp_min: weatherData.main.temp_min,
+            temp_max: weatherData.main.temp_max,
+            pressure: weatherData.main.pressure,
+            wind: weatherData.wind.speed,
+            humidity: weatherData.main.humidity,
+            precipitation: weatherData.main.rain.description,
+            cloudiness: weatherData.clouds.all,
+          }
+        });
+
+        console.log('halo', this.state);
+
+      })
+      .catch(error => {
+        console.log('halo', this.state, error);
+        this.setState(prevState => ({
+          error: true,
+        }));
+      })
+
+    this.setState({
+      'imBusy : true'
     })
-    .catch(error => {
-      console.log('halo', this.state, error);
-      this.setState(prevState => ({ 
-        error: true,
-    }));
-    })
+
+    setTimeout(() => (
+      console.log(this.state)
+
+      this.setState({
+        'imBusy : false'
+      })
+
+    ), 2000)
   }
 
-    render() {
-      return (
-        <div className="wrapper">
-          <div className="app container">
-            <SearchCity 
-            value={this.state.value} 
+  render() {
+    const { value, weather, imBusy, error } = this.state
+
+    if (imBusy === true) {
+      return (<div classNam="container">
+        <h4>Please wait</h4>
+      </div>)
+    }
+    return (
+      <div className="wrapper">
+        <div className="app container">
+          <SearchCity
+            value={this.state.value}
             change={this.handleInputChange}
             submit={this.handleCitySubmit}
-            />
-            <ViewWeather 
-            error = {this.state.error}
-            weather = {this.state.weather}/>
-          </div>
+          />
+          <ViewWeather
+            error={this.state.error}
+            weather={this.state.weather} />
         </div>
-      );
-    }
+      </div>
+    );
   }
+}
 
-  export default App;
+export default App;

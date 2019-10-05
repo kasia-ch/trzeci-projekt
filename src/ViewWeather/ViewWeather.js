@@ -12,7 +12,7 @@ const ViewWeather = (props)=>{
 
     if (error===true) {
         return (
-            <h1>error</h1>
+            <h1>City not found</h1>
         )
     }
     return ( 
@@ -54,19 +54,19 @@ const ViewWeather = (props)=>{
                 <tr>
                     <th scope="row"></th>
                     <td>Temperature:</td>
-                    <td>{temp}</td>
+                    <td>{temp}&#176;C</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th scope="row"></th>
                     <td>Min. temperature:</td>
-                    <td>{temp_min}</td>
+                    <td>{temp_min}&#176;C</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th scope="row"></th>
                     <td>Max. temperature:</td>
-                    <td>{temp_max}</td>
+                    <td>{temp_max}&#176;C</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -84,7 +84,7 @@ const ViewWeather = (props)=>{
                 <tr>
                     <th scope="row"></th>
                     <td>Wind:</td>
-                    <td>{wind}</td>
+                    <td>{wind}m/s</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -96,7 +96,7 @@ const ViewWeather = (props)=>{
                 <tr>
                     <th scope="row"></th>
                     <td>Pressure:</td>
-                    <td>{pressure}</td>
+                    <td>{pressure}hPa</td>
                     <td></td>
                 </tr>              
             </tbody>
