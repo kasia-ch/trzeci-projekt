@@ -1,5 +1,5 @@
 import React from 'react';
-import Moment from 'moment';
+import moment from 'moment';
 import './ViewWeather.css';
 
 const ViewWeather = (props) => {
@@ -55,13 +55,13 @@ const ViewWeather = (props) => {
                         <tr>
                             <th scope="row"></th>
                             <td>Sunrise:</td>
-                            <td><Moment date={sunrise}></Moment></td>
+                            <td>{moment(sunrise).format('HH:mm DD.MM.YYYY')}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
                             <td>Sunset:</td>
-                            <td><Moment date={sunset}></Moment></td>
+                            <td>{moment(sunset).format('HH:mm DD.MM.YYYY')}</td>
                             <td></td>
                         </tr>
                         <tr>
