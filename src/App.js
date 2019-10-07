@@ -10,7 +10,6 @@ class App extends React.Component {
   constructor(props) {
     super(props)
 
-
     this.state = {
       value: "",
       weather: {
@@ -46,7 +45,7 @@ class App extends React.Component {
       .then(res => {
         const weatherData = res.data;
 
-        console.log(weatherData);
+        console.log('success', weatherData);
 
         this.setState({
           imBusy: false,
@@ -54,7 +53,7 @@ class App extends React.Component {
           weather: {
             date: this.state.date,
             city: this.state.value,
-            geoCoords: weatherData.coord.lon.lat,
+            geoCoords: `lat: ${weatherData.coord.lat}, lon: ${weatherData.coord.lon}`,
             sunrise: weatherData.sys.sunrise,
             sunset: weatherData.sys.sunset,
             temp: weatherData.main.temp,
@@ -63,7 +62,7 @@ class App extends React.Component {
             pressure: weatherData.main.pressure,
             wind: weatherData.wind.speed,
             humidity: weatherData.main.humidity,
-            precipitation: weatherData.main.rain.description,
+            // precipitation: weatherData.main.rain.description,
             cloudiness: weatherData.clouds.all,
           }
         });
@@ -72,7 +71,7 @@ class App extends React.Component {
 
       })
       .catch(error => {
-        console.log('halo', this.state, error);
+        console.log('error', this.state, error);
         this.setState(prevState => ({
           error: true,
         }));
@@ -96,7 +95,7 @@ class App extends React.Component {
     const { value, weather, imBusy, error } = this.state
 
     if (imBusy === true) {
-      return (<div classNam="container">
+      return (<div className="container">
         <h4>Please wait</h4>
       </div>)
     }
