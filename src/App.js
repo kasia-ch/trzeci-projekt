@@ -24,7 +24,8 @@ class App extends React.Component {
         pressure: "",
         wind: "",
         humidity: "",
-        precipitation: "",
+        rain: "",
+        snow: "",
         cloudiness: ""
       },
       imBusy: false,
@@ -62,7 +63,8 @@ class App extends React.Component {
             pressure: weatherData.main.pressure,
             wind: weatherData.wind.speed,
             humidity: weatherData.main.humidity,
-            // precipitation: weatherData.main.rain.description,
+            //rain: weatherData.rain.1h,
+            //snow: weatherData.snow.1h
             cloudiness: weatherData.clouds.all,
           }
         });

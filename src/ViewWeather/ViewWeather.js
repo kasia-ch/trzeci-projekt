@@ -15,7 +15,8 @@ const ViewWeather = (props) => {
         pressure,
         wind,
         humidity,
-        precipitation,
+        rain,
+        snow,
         cloudiness
     } = props.weather
 
@@ -85,13 +86,19 @@ const ViewWeather = (props) => {
                         <tr>
                             <th scope="row"></th>
                             <td>Humidity:</td>
-                            <td>{humidity}</td>
+                            <td>{humidity}%</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Precipitation:</td>
-                            <td>{precipitation}</td>
+                            <td>Rain:</td>
+                            <td>{rain}</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Snow:</td>
+                            <td>{snow}</td>
                             <td></td>
                         </tr>
                         <tr>
@@ -103,13 +110,13 @@ const ViewWeather = (props) => {
                         <tr>
                             <th scope="row"></th>
                             <td>Cloudiness:</td>
-                            <td>{cloudiness}</td>
+                            <td>{cloudiness}%</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
                             <td>Pressure:</td>
-                            <td>{pressure}hPa</td>
+                            <td>{pressure} hPa</td>
                             <td></td>
                         </tr>
                     </tbody>
