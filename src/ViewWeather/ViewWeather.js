@@ -55,13 +55,13 @@ const ViewWeather = (props) => {
                         <tr>
                             <th scope="row"></th>
                             <td>Sunrise:</td>
-                            <td>{moment(sunrise).format('HH:mm DD.MM.YYYY')}</td>
+                            <td>{moment(sunrise,'X').format('HH:mm DD.MM.YYYY')}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
                             <td>Sunset:</td>
-                            <td>{moment(sunset).format('HH:mm DD.MM.YYYY')}</td>
+                            <td>{moment(sunset,'X').format('HH:mm DD.MM.YYYY')}</td>
                             <td></td>
                         </tr>
                         <tr>
