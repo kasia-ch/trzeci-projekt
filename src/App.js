@@ -79,17 +79,17 @@ class App extends React.Component {
       })
 
     this.setState({
-      'imBusy : true'
-    })
+      'imBusy' : true
+    });
 
-    setTimeout(() => (
+    setTimeout(() => {
       console.log(this.state)
 
       this.setState({
-        'imBusy : false'
-      })
-
-    ), 2000)
+        'imBusy' : false
+      });
+    
+    }, 2000)
   }
 
   render() {
