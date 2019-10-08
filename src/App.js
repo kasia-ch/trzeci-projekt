@@ -63,14 +63,11 @@ class App extends React.Component {
             pressure: weatherData.main.pressure,
             wind: weatherData.wind.speed,
             humidity: weatherData.main.humidity,
-            //rain: weatherData.rain.1h,
-            //snow: weatherData.snow.1h
+            rain: weatherData.rain,
+            snow: weatherData.snow,
             cloudiness: weatherData.clouds.all,
           }
         });
-
-        console.log('halo', this.state);
-
       })
       .catch(error => {
         console.log('error', this.state, error);
@@ -78,19 +75,6 @@ class App extends React.Component {
           error: true,
         }));
       })
-
-    this.setState({
-      'imBusy' : true
-    });
-
-    setTimeout(() => {
-      console.log(this.state)
-
-      this.setState({
-        'imBusy' : false
-      });
-    
-    }, 2000)
   }
 
   render() {

@@ -28,7 +28,31 @@ const ViewWeather = (props) => {
         )
     }
 
-    if (city && geoCoords && temp_min) {
+    let rainForecast, snowForecast;
+
+    if (rain) {
+        rainForecast = (
+            <tr>
+                <th scope="row"></th>
+                <td>Rain:</td>
+                <td>{rain}</td>
+                <td></td>
+            </tr>
+        )
+    }
+
+    if (snow) {
+        snowForecast = (
+            <tr>
+                <th scope="row"></th>
+                <td>Snow:</td>
+                <td>{snow}</td>
+                <td></td>
+            </tr>
+        )
+    }
+
+    if (city && geoCoords) {
         return (
             <div>
                 <table className="table table-borderless">
@@ -56,13 +80,13 @@ const ViewWeather = (props) => {
                         <tr>
                             <th scope="row"></th>
                             <td>Sunrise:</td>
-                            <td>{moment(sunrise,'X').format('HH:mm DD.MM.YYYY')}</td>
+                            <td>{moment(sunrise, 'X').format('HH:mm DD.MM.YYYY')}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
                             <td>Sunset:</td>
-                            <td>{moment(sunset,'X').format('HH:mm DD.MM.YYYY')}</td>
+                            <td>{moment(sunset, 'X').format('HH:mm DD.MM.YYYY')}</td>
                             <td></td>
                         </tr>
                         <tr>
@@ -89,18 +113,8 @@ const ViewWeather = (props) => {
                             <td>{humidity}%</td>
                             <td></td>
                         </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td>Rain:</td>
-                            <td>{rain}</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td>Snow:</td>
-                            <td>{snow}</td>
-                            <td></td>
-                        </tr>
+                        {rainForecast}
+                        {snowForecast}
                         <tr>
                             <th scope="row"></th>
                             <td>Wind:</td>
