@@ -3,6 +3,7 @@ import './App.css';
 import SearchCity from './SearchCity/SearchCity';
 import ViewWeather from './ViewWeather/ViewWeather';
 import axios from 'axios';
+//import BackgroundImage from './BackgroundImage/BackgroundImage';
 
 const APIKey = '05508bb378ad891b493b0c886cca7a57';
 
@@ -42,7 +43,11 @@ class App extends React.Component {
   handleCitySubmit = (event) => {
     event.preventDefault()
 
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIKey}&units=metric`)
+    this.setState({
+      'imBusy': true
+    });
+
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIKey}&units=metric`)
       .then(res => {
         const weatherData = res.data;
 
@@ -87,6 +92,7 @@ class App extends React.Component {
     }
     return (
       <div className="wrapper">
+        {/*<BackgroundImage/>*/}
         <div className="app container">
           <SearchCity
             value={this.state.value}
