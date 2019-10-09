@@ -1,10 +1,14 @@
-.wrapper {
-  width: 100vw;
-  /*background: rgb(148,187,233);
-  background: radial-gradient(circle, rgba(148,187,233,1) 0%, rgba(137,245,110,1) 100%);*/
+body {
   background-image: url("./img/background.jpg");
+  width: 100vw;
 }
 
+.wrapper {
+  width: 50vw;
+  margin: 5% auto;
+  background: rgba(255, 255, 255, 0.8);
+  
+}
 
 
 .app {
