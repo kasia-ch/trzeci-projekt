@@ -10,7 +10,7 @@ class SearchCity extends React.Component {
         return (
             <div>
                 <h1 className="mx-auto" style={{ "width": "800px" }}> Current weather and forecasts in your city</h1>
-                    <div className="input-group mb-3 container">
+                    <div className="input-group input-group-sm mb-3 container">
                         <input type="text" name="input" className="form-control" placeholder="City name" aria-label="city name"
                             aria-describedby="button-addon"
                             value={value}

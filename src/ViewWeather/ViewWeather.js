@@ -35,7 +35,7 @@ const ViewWeather = (props) => {
             <tr>
                 <th scope="row"></th>
                 <td>Rain:</td>
-                <td>{rain}</td>
+                <td>{rain["1h"]}mm</td>
                 <td></td>
             </tr>
         )
@@ -46,7 +46,7 @@ const ViewWeather = (props) => {
             <tr>
                 <th scope="row"></th>
                 <td>Snow:</td>
-                <td>{snow}</td>
+                <td>{snow["1h"]}mm</td>
                 <td></td>
             </tr>
         )
@@ -138,7 +138,7 @@ const ViewWeather = (props) => {
             </div>
         )
     } else {
-        return <h1>No city has been selected</h1>
+        return <h1 >No city has been selected</h1>
     }
 }
 
