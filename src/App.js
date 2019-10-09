@@ -85,8 +85,8 @@ class App extends React.Component {
     const { value, weather, imBusy, error } = this.state
 
     if (imBusy === true) {
-      return (<div className="container">
-        <h4>Please wait</h4>
+      return (<div className="container wrapper">
+        <h1 className="text-center">Please wait</h1>
       </div>)
     }
     return (

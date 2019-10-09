@@ -24,7 +24,7 @@ const ViewWeather = (props) => {
 
     if (error === true) {
         return (
-            <h1>City not found</h1>
+            <h1 className="text-center">City not found</h1>
         )
     }
 
@@ -67,49 +67,49 @@ const ViewWeather = (props) => {
                     <tbody>
                         <tr>
                             <th scope="row"></th>
-                            <td>Weather in:</td>
-                            <td>{city}</td>
+                            <td className='font-weight-bold'>Weather in:</td>
+                            <td className='font-italic'>{city}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Geo coordinates:</td>
+                            <td className='font-weight-bold'>Geo coordinates:</td>
                             <td>{[geoCoords]}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Sunrise:</td>
+                            <td className='font-weight-bold'>Sunrise:</td>
                             <td>{moment(sunrise, 'X').format('HH:mm DD.MM.YYYY')}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Sunset:</td>
+                            <td className='font-weight-bold'>Sunset:</td>
                             <td>{moment(sunset, 'X').format('HH:mm DD.MM.YYYY')}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Temperature:</td>
+                            <td className='font-weight-bold'>Temperature:</td>
                             <td>{temp}&#176;C</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Min. temperature:</td>
+                            <td className='font-weight-bold'>Min. temperature:</td>
                             <td>{temp_min}&#176;C</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Max. temperature:</td>
+                            <td className='font-weight-bold'>Max. temperature:</td>
                             <td>{temp_max}&#176;C</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Humidity:</td>
+                            <td className='font-weight-bold'>Humidity:</td>
                             <td>{humidity}%</td>
                             <td></td>
                         </tr>
@@ -117,19 +117,19 @@ const ViewWeather = (props) => {
                         {snowForecast}
                         <tr>
                             <th scope="row"></th>
-                            <td>Wind:</td>
+                            <td className='font-weight-bold'>Wind:</td>
                             <td>{wind}m/s</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Cloudiness:</td>
+                            <td className='font-weight-bold'>Cloudiness:</td>
                             <td>{cloudiness}%</td>
                             <td></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Pressure:</td>
+                            <td className='font-weight-bold'>Pressure:</td>
                             <td>{pressure} hPa</td>
                             <td></td>
                         </tr>
@@ -138,7 +138,7 @@ const ViewWeather = (props) => {
             </div>
         )
     } else {
-        return <h1 >No city has been selected</h1>
+        return <h1 className="text-center">No city has been selected</h1>
     }
 }
 
