@@ -3,7 +3,6 @@ import './App.css';
 import SearchCity from './SearchCity/SearchCity';
 import ViewWeather from './ViewWeather/ViewWeather';
 import axios from 'axios';
-//import BackgroundImage from './BackgroundImage/BackgroundImage';
 
 const APIKey = '05508bb378ad891b493b0c886cca7a57';
 
@@ -92,7 +91,6 @@ class App extends React.Component {
     }
     return (
       <div className="wrapper">
-        {/*<BackgroundImage/>*/}
         <div className="app container">
           <SearchCity
             value={this.state.value}
