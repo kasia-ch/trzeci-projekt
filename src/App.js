@@ -77,6 +77,7 @@ class App extends React.Component {
         console.log('error', this.state, error);
         this.setState(prevState => ({
           error: true,
+          imBusy: false,
         }));
       })
   }
